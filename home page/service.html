@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Services.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">
+        <h2>🐔 Poultry Farm</h2>
+    </div>
+
+    <ul class="menu">
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="Home.html">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="Home.html">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Services Section -->
+<section class="services">
+    <h2>Our Services</h2>
+    <p class="services-text">
+        We provide smart and efficient solutions to help poultry farmers manage their farms easily.
+    </p>
+    <div class="service-cards" data-aos="zoom-in">
+
+         <div class="service-card" onclick="openService('farm')">
+    <i class="fas fa-warehouse"></i>
+    <h3>Farm Management</h3>
+    <p>Manage your poultry farm operations efficiently.</p>
+</div>
+        
+
+    <div class="service-card" onclick="openService('tracking')">
+        <i class="fas fa-chart-line"></i>
+        <h3>Animal Tracking</h3>
+        <p>Track animal health, growth, and performance in real-time.</p>
+    </div>
+
+    <div class="service-card" onclick="openService('biosecurity')">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Biosecurity</h3>
+        <p>Ensure safety and prevent disease with strong biosecurity practices.</p>
+    </div>
+
+    <div class="service-card">
+        <i class="fas fa-mobile-alt"></i>
+        <h3>Mobile Access</h3>
+        <p>Access your farm data anytime, anywhere.</p>
+    </div>
+
+    <div class="service-card" onclick="openService('reports')">
+        <i class="fas fa-chart-pie"></i>
+        <h3>Reports & Analytics</h3>
+        <p>Generate insights to improve farm productivity.</p>
+    </div>
+
+    <div class="service-card">
+        <i class="fas fa-users"></i>
+        <h3>User Management</h3>
+        <p>Manage multiple users and roles easily.</p>
+    </div>
+</div>
+</section>
+<script>
+function openService(service) {
+    window.location.href = service + ".html";
+}
+</script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init();
+</script>
+
+</body>
+</html>
