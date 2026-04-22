@@ -3,6 +3,35 @@ body {
     font-family: Arial;
     background: #f5f5f5;
 }
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo h2 {
+    color: #333;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.menu li a:hover {
+    color: green;
+}
 
 .container {
     display: flex;
@@ -62,4 +91,15 @@ button:hover {
 a {
     color: #007bff;
     text-decoration: none;
+}
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
