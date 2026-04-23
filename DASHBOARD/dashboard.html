@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Farm Biosecurity Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="dashboard">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2>🌿 FarmSafe</h2>
+    <ul>
+      <li class="active">Dashboard</li>
+      <li>Animals</li>
+      <li>Biosecurity</li>
+      <li>Visitors</li>
+      <li>Reports</li>
+      <li>Settings</li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main">
+
+    <!-- Topbar -->
+    <header class="topbar">
+      <h1>Biosecurity Dashboard</h1>
+      <div class="profile">👩‍🌾 Suhani</div>
+    </header>
+
+    <!-- Cards -->
+        <section class="cards">
+
+  <div class="card">
+    <h3>Total Animals</h3>
+    <input type="number" id="totalAnimals">
+  </div>
+
+  <div class="card">
+    <h3>Healthy</h3>
+    <input type="number" id="healthyAnimals">
+  </div>
+
+  <div class="card">
+    <h3>At Risk</h3>
+    <p class="red" id="riskCount">0</p>
+  </div>
+
+  <div class="card">
+    <h3>Visitors Today</h3>
+    <input type="number" id="visitors">
+  </div>
+
+</section>
+
+<button onclick="saveData()" class="save-btn">💾 Save Data</button>
+
+    <!-- <section class="chart-section">
+  <h2>📊 Farm Health Overview</h2>
+  <canvas id="farmChart"></canvas>
+</section>
+     -->
+
+    <!-- Biosecurity Section -->
+    <section class="biosecurity">
+
+    <div class="box">
+    <h2>🚨 Alerts</h2>
+    <ul id="alertList">
+    <li>⚠️ Unauthorized visitor detected</li>
+    <li>⚠️ Disinfection pending at gate</li>
+</ul>
+
+<input type="text" id="alertInput" placeholder="Add alert">
+<button onclick="addAlert()">Add</button>
+</div>
+
+      <!-- Hygiene checklist -->
+       <div class="box">
+  <h2>🧼 Hygiene Checklist</h2>
+  <ul>
+    <li><input type="checkbox" class="check"> Footbath cleaned</li>
+    <li><input type="checkbox" class="check"> Equipment sanitized</li>
+    <li><input type="checkbox" class="check"> Worker PPE used</li>
+  </ul>
+</div>
+
+      
+
+      <!-- farm status -->
+
+      <div class="box">
+        <h2>📊 Farm Status</h2>
+        <p>Pig Unit: ✅ Safe</p>
+        <p>Poultry Unit: ⚠️ Moderate Risk</p>
+      </div>
+
+    </section>
+
+    <!-- Table -->
+    <section class="table-section">
+      <h2>🚛 Visitor Log</h2>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Purpose</th>
+          <th>Time</th>
+          <th>Status</th>
+        </tr>
+        <tr>
+          <td>Ravi Kumar</td>
+          <td>Feed Delivery</td>
+          <td>10:30 AM</td>
+          <td class="green">Approved</td>
+        </tr>
+        <tr>
+          <td>Amit Singh</td>
+          <td>Inspection</td>
+          <td>12:00 PM</td>
+          <td class="red">Pending</td>
+        </tr>
+      </table>
+    </section>
+
+  </main>
+
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
