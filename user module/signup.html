@@ -33,6 +33,12 @@
             <input type="email" placeholder="Email" required>
             <input type="password" placeholder="Password" required>
 
+            <select id="role" required>
+    <option value="">Select Role</option>
+    <option value="admin" id="admin">Admin</option>
+    <option value="worker" id="worker">Worker</option>
+</select>
+
             <button>Signup</button>
         </form>
 
@@ -41,6 +47,24 @@
         </p>
     </div>
 </div>
+
+<script>
+document.querySelector("form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let name = document.querySelector("input[type='text']").value;
+    let email = document.querySelector("input[type='email']").value;
+    let password = document.querySelector("input[type='password']").value;
+    let role = document.getElementById("role").value;
+
+    let user = { name, email, password, role };
+
+    localStorage.setItem(email, JSON.stringify(user));
+
+    alert("Signup Successful!");
+    window.location.href = "login.html";
+});
+</script>
 
 </body>
 </html>
